@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // set up the perspective transform 
+        // set up the perspective transform
         var pt = CATransform3DIdentity
         pt.m34 = -1.0 / 500.0
         self.view.layer.sublayerTransform = pt
@@ -89,20 +89,5 @@ class ViewController: UIViewController {
         return cube
     
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func getRandomColor() -> UIColor{
-        //Generate between 0 to 1
-        let red:CGFloat = CGFloat(drand48())
-        let green:CGFloat = CGFloat(drand48())
-        let blue:CGFloat = CGFloat(drand48())
-        
-        return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
-    }
-    
 }
 
